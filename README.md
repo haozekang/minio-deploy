@@ -11,7 +11,7 @@
 # config
 
 ```yaml
-# 部署时创建使用的用户
+# 部署时创建使用的用户，仅对linux有效
 systemUser: minio-user
 
 # MinIO使用的数据目录，不存在则自动新建，注意位置和权限问题！
@@ -32,7 +32,7 @@ address: ':9000'
 # API监听地址及端口
 consoleAddress: ':9001'
 
-# 区域数据，仅linux启用了
+# 区域数据
 region: 'cn-north-1'
 ```
 
