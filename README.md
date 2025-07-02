@@ -5,6 +5,7 @@
 # faq
 
 1. 内网机器无法下载Minio怎么破？
+
 如果内网机器，无法连接minio下载地址，把下载好的minio程序和部署程序放在一起，然后启动部署程序，也是会自动部署的，需要将minio程序命名为“minio”，windows下命名为“minio.exe”即可。
 
 # config
