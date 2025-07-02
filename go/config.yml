@@ -1,0 +1,8 @@
+systemUser: minio-user
+data: data
+opts:
+minioRootUser: superadmin
+minioRootPassword: superadmin
+address: ':9000'
+consoleAddress: ':9001'
+region: 'cn-north-1'
