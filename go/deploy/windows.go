@@ -24,6 +24,10 @@ func Deploy(exePath string, config *config2.Config) bool {
 	fmt.Println("Minio DataPath:", dataAbsPath)
 	_ = os.Setenv("MINIO_ROOT_USER", config.MinIORootUser)
 	_ = os.Setenv("MINIO_ROOT_PASSWORD", config.MinIORootPassword)
+	if config.Region != "" {
+		fmt.Println("Minio Region       :", config.Region)
+		_ = os.Setenv("MINIO_REGION", config.Region)
+	}
 	fmt.Println("Minio Root User    :", config.MinIORootUser)
 	fmt.Println("Minio Root Password:", config.MinIORootPassword)
 	cmd := exec.Command(
@@ -32,7 +36,6 @@ func Deploy(exePath string, config *config2.Config) bool {
 		config.Data,
 		"--address="+config.Address,
 		"--console-address="+config.ConsoleAddress,
-		"----region="+config.Region,
 	)
 
 	stdoutPipe, _ := cmd.StdoutPipe()
