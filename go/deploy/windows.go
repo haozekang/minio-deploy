@@ -27,7 +27,7 @@ func Deploy(exePath string, config *config2.Config) bool {
 	fmt.Println("Minio Root User    :", config.MinIORootUser)
 	fmt.Println("Minio Root Password:", config.MinIORootPassword)
 	cmd := exec.Command(
-		`D:\GolandProjects\minioDeploy\minio.exe`,
+		exeAbsPath,
 		"server",
 		config.Data,
 		"--address="+config.Address,
